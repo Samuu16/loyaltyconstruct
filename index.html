@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loyalty Constructions & Developers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fallback CSS to ensure basic styling loads if CDN fails */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+      color: #1f2937;
+    }
+
+    .hero-section {
+      background-image: url('building.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card {
+      overflow: hidden;
+      flex-shrink: 0;
+      width: 300px;
+      /* Adjust as needed */
+    }
+
+    .project-card img {
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .scroll-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE and Edge */
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header Section -->
+  <header class="bg-white shadow-lg rounded-b-2xl p-4 md:p-6 mb-8 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center flex-wrap">
+      <div class="flex items-center space-x-2">
+        <!-- Loyalty Logo as SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-12 h-12 text-orange-600">
+          <path fill-rule="evenodd"
+            d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zM12 4.5a2.25 2.25 0 00-2.25 2.25v3a3.75 3.75 0 013.75-3.75h1.5A2.25 2.25 0 0015.75 6.75v3a3.75 3.75 0 013.75 3.75v1.5a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h.75v-1.5a2.25 2.25 0 00-2.25-2.25v-3zM12 18a3 3 0 01-3-3v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75V15a3 3 0 01-3 3z"
+            clip-rule="evenodd" />
+        </svg>
+        <div>
+          <h1 class="text-2xl font-bold text-gray-800">Loyalty Constructions & Developers</h1>
+          <p class="text-sm text-gray-500">Building Your Dream Home</p>
+        </div>
+      </div>
+      <nav class="mt-4 md:mt-0">
+        <ul class="flex space-x-4 md:space-x-8 text-gray-600 font-semibold">
+          <li><a href="#about" class="hover:text-orange-600 transition-colors">About Us</a></li>
+          <li><a href="#services" class="hover:text-orange-600 transition-colors">Services</a></li>
+          <li><a href="#projects" class="hover:text-orange-600 transition-colors">Projects</a></li>
+          <li><a href="#contact" class="hover:text-orange-600 transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 md:px-6">
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section h-[70vh] md:h-[80vh] rounded-3xl overflow-hidden mb-12 flex items-center justify-center text-center">
+      <div class="hero-overlay w-full h-full flex items-center justify-center p-6 md:p-12">
+        <div class="text-white">
+          <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-md">Building Your Dreams into
+            Reality</h2>
+          <p class="text-lg md:text-xl font-medium mb-8 max-w-2xl mx-auto drop-shadow-sm">
+            As expert civil engineers in the Sindhudurg District, we specialize in creating bespoke Konkan-style homes,
+            bungalows, and all types of construction projects.
+          </p>
+          <a href="#contact"
+            class="bg-white text-orange-600 font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-200 transition-transform transform hover:scale-105">Get
+            a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Expertise Section -->
+    <section id="services" class="bg-white rounded-3xl shadow-xl p-6 md:p-12 mb-12">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Our Expertise</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We offer a comprehensive range of construction and development services to meet your every need.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4">
+        <!-- Service List Item 1 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">Konkan Style Typical House</span>
+        </div>
+        <!-- Service List Item 2 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">Bungalow With Lock and Key</span>
+        </div>
+        <!-- Service List Item 3 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">Row Houses</span>
+        </div>
+        <!-- Service List Item 4 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">Twin Bungalow</span>
+        </div>
+        <!-- Service List Item 5 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">Load Bearing Construction</span>
+        </div>
+        <!-- Service List Item 6 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">RCC Construction</span>
+        </div>
+        <!-- Service List Item 7 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">Architecture Planning</span>
+        </div>
+        <!-- Service List Item 8 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">3D View and Walkthrough for Better Idea</span>
+        </div>
+        <!-- Service List Item 9 -->
+        <div class="flex items-start space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="w-5 h-5 text-orange-600 mt-1">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.127 1.077l-5.5 8.75a.75.75 0 01-1.233.02L4.35 9.77a.75.75 0 011.09-1.02l4.237 4.542 5.097-8.118a.75.75 0 011.076-.127z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="text-lg text-gray-700">All Types of Construction Services</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Projects Section -->
+    <section id="projects" class="bg-gray-200 rounded-3xl shadow-xl p-6 md:p-12 mb-12">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Our Featured Projects</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Take a look at some of the beautiful homes we've built.
+        </p>
+      </div>
+      <div class="scroll-container flex space-x-6 pb-4">
+        <!-- Project Card 1: Konkan Style Home -->
+        <div class="project-card bg-white rounded-2xl shadow-md">
+          <img src="uploaded:image_8bdeaf.jpg" alt="A beautiful Konkan style home built by Loyalty Constructions"
+            class="w-full h-auto rounded-t-2xl object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Konkan Style Home</h3>
+            <p class="text-gray-600 mt-1">A stunning custom bungalow featuring traditional Konkan architecture and
+              modern amenities.</p>
+          </div>
+        </div>
+
+        <!-- Project Card 2: Twin Bungalows -->
+        <div class="project-card bg-white rounded-2xl shadow-md">
+          <img src="https://placehold.co/600x400/FF7D00/FFFFFF?text=Twin+Bungalows" alt="A set of twin bungalows"
+            class="w-full h-auto rounded-t-2xl object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Twin Bungalows</h3>
+            <p class="text-gray-600 mt-1">Two connected homes designed with a shared wall, perfect for families who want
+              to stay close.</p>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Modern Row House -->
+        <div class="project-card bg-white rounded-2xl shadow-md">
+          <img src="https://placehold.co/600x400/FF7D00/FFFFFF?text=Modern+Row+House" alt="A modern row house"
+            class="w-full h-auto rounded-t-2xl object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Modern Row House</h3>
+            <p class="text-gray-600 mt-1">A sleek and space-efficient row house with contemporary design elements.</p>
+          </div>
+        </div>
+        <!-- Project Card 4: Load Bearing Construction -->
+        <div class="project-card bg-white rounded-2xl shadow-md">
+          <img src="https://placehold.co/600x400/FF7D00/FFFFFF?text=Load+Bearing+Construction"
+            alt="A house built with load bearing construction" class="w-full h-auto rounded-t-2xl object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Load Bearing Construction</h3>
+            <p class="text-gray-600 mt-1">A project showcasing the strength and durability of our load bearing
+              construction methods.</p>
+          </div>
+        </div>
+
+        <!-- Project Card 5: RCC Construction -->
+        <div class="project-card bg-white rounded-2xl shadow-md">
+          <img src="https://placehold.co/600x400/FF7D00/FFFFFF?text=RCC+Construction"
+            alt="A building with RCC construction" class="w-full h-auto rounded-t-2xl object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">RCC Construction</h3>
+            <p class="text-gray-600 mt-1">A residential building built using high-quality Reinforced Cement Concrete
+              construction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-gray-800 text-white rounded-3xl shadow-xl p-6 md:p-12 mb-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
+      <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        Loyalty Constructions & Developers is dedicated to building high-quality, beautiful homes in the Sindhudurg
+        District. With a team of skilled engineers and contractors, including <strong class="text-orange-400">Er. Puran
+          Saini</strong> and <strong class="text-orange-400">Vinayak S. Nawar</strong>, we specialize in a variety of
+        construction methods and architectural planning to bring your dream home to reality. Our commitment to quality
+        and customer satisfaction is at the core of everything we do.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white rounded-3xl shadow-xl p-6 md:p-12 mb-12">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Get in Touch</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We're ready to help you with your next construction project. Contact us today for a free consultation.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-6">
+          <div class="flex items-start space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-8 h-8 text-orange-600 flex-shrink-0">
+              <path fill-rule="evenodd"
+                d="M11.54 22.351A10.53 10.53 0 011.97 12.257C1.97 7.017 6.22 2.75 11.478 2.75c5.258 0 9.508 4.267 9.508 9.516a10.53 10.53 0 01-9.563 10.093c-.456.09-.906.147-1.35.198zm1.09-17.659A7.502 7.502 0 005.106 12.35c0 4.148 3.376 7.525 7.525 7.525a7.502 7.502 0 007.525-7.525c0-4.148-3.377-7.525-7.525-7.525z"
+                clip-rule="evenodd" />
+              <path
+                d="M11.478 15.352a.75.75 0 01.75-.75H14.25a.75.75 0 010 1.5h-.75V17a.75.75 0 01-1.5 0v-2.4a.75.75 0 01.75-.75z" />
+            </svg>
+            <div class="flex flex-col">
+              <span class="font-semibold text-gray-700">Address</span>
+              <span class="text-gray-600">Flat No. 607A, Siddheshwarwadi, Ubhadanda Vengurla, Redi-Revas Road, Dist.-
+                Sindhudurg 416516</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-8 h-8 text-orange-600">
+              <path
+                d="M11.47 3.864A4.5 4.5 0 0112 3.75h.53a1.5 1.5 0 011.5 1.5v3.236a3.25 3.25 0 003.25 3.25h3.236a1.5 1.5 0 011.5 1.5v.53a4.5 4.5 0 01-.102 1.341l-2.316 7.646A3.25 3.25 0 0117.85 22.5H6.15a3.25 3.25 0 01-3.214-4.262l2.316-7.646A4.5 4.5 0 016 9.53V5.25a1.5 1.5 0 011.5-1.5h.53a4.502 4.502 0 013.94.114z" />
+            </svg>
+            <div class="flex flex-col">
+              <span class="font-semibold text-gray-700">Phone</span>
+              <span class="text-gray-600">Er. Puran S. Saini: 9420082829<br>Vinayak S.Nawar: 9764068259</span>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-8 h-8 text-orange-600">
+              <path
+                d="M1.5 8.67v8.586a1.5 1.5 0 00.985 1.38L7.5 21.5a3 3 0 003 0l5.015-2.864a1.5 1.5 0 00.985-1.38V8.67l3.723-2.668A1.125 1.125 0 0022.5 4.881v-.708C22.5 3.126 21.464 2 20.188 2H3.812C2.536 2 1.5 3.126 1.5 4.173v.708c0 .351.18.683.486.862L1.5 8.67z" />
+            </svg>
+            <div class="flex flex-col">
+              <span class="font-semibold text-gray-700">Email</span>
+              <span class="text-gray-600">sainipuranmal513@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-inner">
+          <form action="#" method="POST" class="space-y-4">
+            <div class="space-y-2">
+              <label for="name" class="block text-sm font-semibold text-gray-700">Name</label>
+              <input type="text" id="name" name="name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
+              <input type="email" id="email" name="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="block text-sm font-semibold text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-orange-600 text-white font-bold py-3 rounded-md hover:bg-orange-700 transition-colors">Send
+              Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6 rounded-t-2xl mt-8">
+    <p class="text-sm">&copy; 2024 Loyalty Constructions & Developers. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollContainer = document.querySelector('.scroll-container');
+      if (scrollContainer) {
+        const scrollSpeed = 0.5; // pixels per frame
+        let scrollInterval;
+        let isHovering = false;
+
+        function startScrolling() {
+          if (scrollInterval) clearInterval(scrollInterval);
+          scrollInterval = setInterval(() => {
+            if (!isHovering) {
+              scrollContainer.scrollLeft += scrollSpeed;
+              if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+                scrollContainer.scrollLeft = 0; // Loop back to the beginning
+              }
+            }
+          }, 20); // Adjust interval for smoother or faster scrolling
+        }
+
+        function stopScrolling() {
+          clearInterval(scrollInterval);
+        }
+
+        scrollContainer.addEventListener('mouseenter', () => {
+          isHovering = true;
+        });
+
+        scrollContainer.addEventListener('mouseleave', () => {
+          isHovering = false;
+        });
+
+        startScrolling();
+      }
+    });
+  </script>
+</body>
+
+</html>
