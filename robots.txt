@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://loyaltyconstructions.shop/sitemap.xml
